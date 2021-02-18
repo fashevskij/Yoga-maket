@@ -1,0 +1,5 @@
+let name = 'Anna',
+    age = 30,
+    mail = 'ex@mail.ru';
+
+document.write(`Пользователю ${name} ${age} лет. Его почтовый арес ${mail}`); // прием интерполяции удобно выводить

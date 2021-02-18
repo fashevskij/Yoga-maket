@@ -1,0 +1,8 @@
+
+function calcOrDouble(number, basis = 2) { //ES6 делает тоже что и строка ниже но короче, если басис не передан он берет 2
+  //basis = basis || 2; // ES5 сделали проверку когда басис равно переданной  басис, или равно 2 если не передана
+  console.log(number * basis);
+}
+
+calcOrDouble(3,5);
+calcOrDouble(6);

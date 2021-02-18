@@ -1,0 +1,27 @@
+//стрелочные функции анонимны, в них нельзя поместить другую функцию
+let fun = () =>{
+    console.log(this);
+};
+//fun();
+
+// У стрелочной функции нет своего контекста вызова, и она будет его брать у своего родителя.
+let obj = {
+    number: 5,
+    sayNumber: function(){
+        let say = () => {
+            console.log(this);
+        };
+        say();
+    }
+};
+
+obj.sayNumber();
+
+let btn = document.querySelector('.btn');
+//в этом примере функция show будет ссылатся на родителя тоесть на btn
+btn.addEventListener('click', function () {
+    let show = () => {
+        console.log(this);
+    };
+    show();
+});
